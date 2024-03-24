@@ -1,13 +1,158 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Overpass", sans-serif;
+    min-height: 100vh;
+    background-color: #141519;
+    padding: 15px;
+    color: hsl(0, 0%, 100%);
+}
+main{
+    width: 83vw;
+    margin: 140px 9px;
+    background: linear-gradient( #202731, #171e28);
+    border-radius: 15px;
+    padding: 24px;
+}
+.cercle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #282d36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(217, 12%, 63%);
+    font-size: 0.88rem;
+}
+.cercle > img{
+    width: 15px;
+}
+h1{
+    font-size: 1.48rem;
+    margin-top: 18px;
+    margin-bottom: 15px;
+}
+p{
+    color: hsl(217, 12%, 63%);
+    font-size: 0.88rem;
+    line-height: 22px;
+}
+.numbers{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.numbers > .cercle:hover{
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    cursor: pointer;
+}
+.button{
+    background-color: #fc7613;
+    height: 45px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+.button:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: #fc7613;
+    cursor: pointer;
+}
+.state-main{
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.state-main > img{
+    width: 140px;
+}
+.you-selected{
+    background-color: #252e3a;
+    color: #fe7416;
+    font-size: 0.88rem;
+    font-weight: 300;
+    display: inline;
+    padding: 6px 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 15px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+footer { 
+    font-size: 11px; 
+    text-align: right; 
+}
+footer a { color: hsl(228, 45%, 44%); }
+
+.cercle.selected {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+ }
+
+@media screen and (min-width: 450px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    footer{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+    main{
+        margin: 0;
+        width: 410px;
+        border-radius: 25px;
+        padding: 30px;
+    }
+    .cercle{
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .cercle > img{
+        width: 18px;
+    }
+    h1{
+        font-size: 1.75rem;
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    p{
+        font-size: 0.95rem;
+        line-height: 22px;
+    }
+    .numbers{
+        margin-top: 30px;
+        margin-bottom: 33px;
+    }
+    .state-main{
+        padding: 45px 35px;
+    }
+    .state-main > img{
+        width: 160px;
+    }
+    .you-selected{
+        font-size: 0.95rem;
+        padding: 8px 20px;
+        margin-bottom: 4px;
+        border-radius: 15px;
+    }
 }
